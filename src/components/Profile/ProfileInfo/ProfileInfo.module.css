@@ -1,0 +1,45 @@
+.descriptionBlock{
+    display: flex;
+    padding: 10px;
+    box-shadow: 0 10px 20px #d3d1d1;;
+}
+
+.delimiter{
+    height: 2px;
+    width: 100%;
+    background-color: #8d8d8d;
+    margin: 10px 0;
+}
+
+.avatar img{
+    width: 180px;
+    height: 180px;
+}
+
+.description{
+    margin-left: 30px;
+    display: block;
+    width: 100%;
+}
+
+.name_info{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.info{
+    margin-bottom: 3px;
+}
+
+.props{
+    margin-bottom: 3px;
+    color: #5d5d5d;
+}
+
+.props_info{
+    margin-left: 50px;
+}
+
+.profile_wrapper{
+    display: flex;
+}

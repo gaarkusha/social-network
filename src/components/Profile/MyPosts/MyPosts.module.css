@@ -1,0 +1,60 @@
+.post{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.postsBlock{
+    padding: 10px;
+}
+
+.delimiter{
+    height: 2px;
+    width: 100%;
+    background-color: #8d8d8d;
+    margin: 10px 0;
+}
+
+.inputPost{
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textarea{
+    resize: none;
+    border-color: #424242;
+    overflow: hidden;
+    margin-right: 15px;
+    padding-top: 7px;
+    width: 500px;
+    height: 25px;
+    border-radius: 30px;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 15px;
+    box-shadow: 0 5px 5px #bdbbbb;
+    outline: none;
+}
+
+.btnPost{
+    font-weight: bold;
+    background-color: #707070;
+    border: 0;
+    border-radius: 7px;
+    color: white;
+    height: 30px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.btnPost:active{
+    background-color: #9f9f9f;
+}
+
+.myPostTitle{
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}

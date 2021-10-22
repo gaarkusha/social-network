@@ -1,0 +1,84 @@
+.delimiter_v{
+    width: 2px;
+    height: 100vh;
+    background-color: #8d8d8d;
+    margin: 20px;
+}
+
+
+.dialogs{
+    display: flex;
+}
+
+.dialog{
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
+
+.message_item {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.dialog img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.message_item img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 30px;
+}
+
+.dialogs_items .active{
+    color: gold;
+}
+
+.name{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.name:hover{
+    color: #424242;
+}
+
+.input_message{
+    margin-left: 10px;
+    height: 20px;
+    width: 300px;
+    border-radius: 15px;
+    margin-right: 10px;
+    border-color: #5d5d5d;
+}
+
+.btn_message{
+    height: 25px;
+    width: 70px;
+    font-weight: bold;
+    background-color: #707070;
+    border: 0;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+
+.message_text{
+    margin: 25px;
+}
+
+.delimiter_g{
+    height: 2px;
+    width: 100%;
+    background-color: #8d8d8d;
+    margin-top: 20px;
+}
+

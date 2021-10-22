@@ -1,0 +1,128 @@
+.reg_wrapper {
+    display: grid;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.reg_block{
+    width: 400px;
+    height: 350px;
+    box-shadow: 0 0 20px #9f9f9f;
+    border-radius: 20px;
+}
+
+.reg_block_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 100px 0;
+}
+
+.input_text {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.mesUp_text {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.input_block {
+    grid-template-areas:
+    'il l'
+    'ip p';
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    margin-left: 40px;
+
+}
+
+.input_log {
+    grid-area: il;
+    border-radius: 15px;
+    border: 2px solid #9f9f9f;
+    height: 20px;
+    width: 250px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.input_pas {
+    grid-area: ip;
+    border-radius: 15px;
+    border: 2px solid #9f9f9f;
+    height: 20px;
+    width: 250px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.log {
+    grid-area: l;
+}
+
+.pas {
+    grid-area: p;
+}
+
+.voiti_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.btn_voiti {
+    border: 2px solid #424242;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    font-weight: bold;
+    color: #424242;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn_voiti:hover {
+    background-color: #424242;
+    color: #ffffff;
+}
+
+.btn_voiti:active {
+    border: 2px solid #9f9f9f;
+    background-color: #9f9f9f;
+    color: #000000;
+}
+
+.btn_vost {
+    border: 2px solid #424242;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    font-weight: bold;
+    color: #424242;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn_vost:hover {
+    background-color: #424242;
+    color: #ffffff;
+}
+
+.btn_vost:active {
+    border: 2px solid #9f9f9f;
+    background-color: #9f9f9f;
+    color: #000000;
+}
