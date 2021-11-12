@@ -1,25 +1,19 @@
 import React, {ChangeEvent} from 'react'
 import s from './MyPosts.module.css'
 import Post from './Post/Post';
-import {ActionsType, addPostAC, postChangeAC, postsType} from "../../../Redux/State";
+import {MyPostPropsType} from "./MyPostsContainer";
 
-type MyPostsProps = {
-    posts: Array<postsType>
-    newPostText: string
-    dispatch: (action: ActionsType) => void
-}
+const MyPosts = (props: MyPostPropsType) => {
 
-const MyPosts = (props: MyPostsProps) => {
+    let postsElements = props.profilePage.posts.map((p) => <Post key={p.id} img={p.img} likesCount={p.likesCount} massage={p.message}/>)
 
-    let postsElements = props.posts.map((p) => <Post key={p.id} img={p.img} likesCount={p.likesCount} massage={p.message}/>)
-
-    const addNewPost = () => {
-        props.dispatch(addPostAC())
+    const onAddPost = () => {
+        props.addPost()
     }
 
     const onPostChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
         let newText = e.currentTarget.value
-        props.dispatch(postChangeAC(newText))
+        props.updateNewPostText(newText)
     }
 
     return (
@@ -28,10 +22,10 @@ const MyPosts = (props: MyPostsProps) => {
             <div className={s.inputPost}>
                 <textarea className={s.textarea}
                           placeholder='anything new?'
-                          value={props.newPostText}
+                          value={props.profilePage.newPostText}
                           onChange={onPostChange}/>
                 <button className={s.btnPost}
-                        onClick={addNewPost}>Add post</button>
+                        onClick={onAddPost}>Add post</button>
             </div>
             <div className={s.myPost}>
                 <div className={s.myPostTitle}>My post</div>

@@ -3,47 +3,31 @@ import './App.css';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
-import {BrowserRouter, Route} from 'react-router-dom';
-import {ActionsType, storeType} from "./Redux/State";
+import {Route} from 'react-router-dom';
 import {Friends} from "./components/Friends/Friends";
-import {Regestration} from "./components/Regestration/Regestration";
+import {DialogsContainer} from "./components/Dialogs/DialogsContainer";
+import {UsersContainer} from "./components/Users/UsersContainer";
 
-type AppProps = {
-  store: storeType
-  dispatch: (action: ActionsType) => void
-}
+const App = () => {
 
-const App = (props: AppProps) => {
-
-  const state = props.store.getState();
-
-  return (
-      <BrowserRouter>
+    return (
         <div className='app-wrapper'>
-          <Header/>
-          <Navbar/>
-          <div className='app-wrapper-content'>
-            <Route path='/dialogs' render={() => <Dialogs dialogsData={state.DialogPage.dialogsData}
-                                                          messages={state.DialogPage.messages}/>}/>
-            <div className='app-wrapper-profile'>
-              <Route path='/profile' render={() => <Profile posts={state.ProfilePage.posts}
-                                                            profileInfo={state.ProfilePage.profileInfo}
-                                                            dispatch={props.dispatch}
-                                                            newPostText={state.ProfilePage.newPostText}/>}/>
+            <Header/>
+            <Navbar/>
+            <div className='app-wrapper-content'>
+                <Route path='/dialogs' render={() => <DialogsContainer/>}/>
+                <Route path='/profile' render={() => <Profile/>}/>
+                <Route path='/users' render={() => <UsersContainer/>}/>
+                <Route path='/friends' render={() => <Friends/>}/>
+                <Route path='/news' render={() => <News/>}/>
+                <Route path='/music' render={() => <Music/>}/>
+                <Route path='/settings' render={() => <Settings/>}/>
             </div>
-            <Route path='/reg' render={() => <Regestration/>}/>
-            <Route path='/friends' render={() => <Friends/>}/>
-            <Route path='/news' render={() => <News/>}/>
-            <Route path='/music' render={() => <Music/>}/>
-            <Route path='/settings' render={() => <Settings/>}/>
-          </div>
         </div>
-      </BrowserRouter>
-  );
+    );
 }
 
 export default App;

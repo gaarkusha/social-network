@@ -10,9 +10,6 @@ const Header = () => {
                      src='https://www.nicepng.com/png/full/82-824139_chat-icons-png-image-library-message-icon-black.png'/>
                 <div className={s.text_logo}>mesUp</div>
             </div>
-            <div className={s.exit_block}>
-                <div className={s.btn_exit}><NavLink to='/reg' activeClassName={s.activeLink}>exit</NavLink></div>
-            </div>
         </div>
     </header>
 }

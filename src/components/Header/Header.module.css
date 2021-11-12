@@ -28,24 +28,3 @@
     font-size: 30px;
     font-family: 'Ephesis', cursive;
 }
-
-.btn_exit {
-    font-weight: bold;
-    font-size: 20px;
-    color: #424242;
-    text-decoration: none;
-}
-
-.btn_exit a.activeLink{
-    font-weight: bold;
-    font-size: 20px;
-    color: #424242;
-    text-decoration: none;
-}
-
-.btn_exit a:hover{
-    color: #000000;
-}
-.btn_exit a:active{
-    color: #424242;
-}
